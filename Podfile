@@ -9,5 +9,8 @@ target 'TestProject' do
 
 
 pod 'Alamofire', '~> 4.4'
+pod 'SDWebImage/WebP'
+pod 'JTProgressHUD’
+
 
 end

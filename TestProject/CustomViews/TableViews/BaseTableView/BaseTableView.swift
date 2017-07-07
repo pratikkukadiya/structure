@@ -33,7 +33,7 @@ class BaseTableView:UITableView {
     }
     
     func showTextIfNoDataAvailable(strText:String,table:UITableView){
-        let emptyLabel = AILabel(frame: CGRect(x: 0, y: 0, width: table.bounds.size.width, height: table.bounds.size.height))
+        let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: table.bounds.size.width, height: table.bounds.size.height))
         emptyLabel.text = strText
         emptyLabel.textAlignment = NSTextAlignment.center
 //        emptyLabel.font = UIFont.appFont_Medium_WithSize(fontSize: CGFloat(24.0).proportionalFontSize())

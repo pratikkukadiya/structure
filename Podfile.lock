@@ -1,12 +1,46 @@
 PODS:
   - Alamofire (4.5.0)
+  - JTProgressHUD (1.0.5)
+  - libwebp (0.6.0):
+    - libwebp/core (= 0.6.0)
+    - libwebp/dec (= 0.6.0)
+    - libwebp/demux (= 0.6.0)
+    - libwebp/dsp (= 0.6.0)
+    - libwebp/enc (= 0.6.0)
+    - libwebp/mux (= 0.6.0)
+    - libwebp/utils (= 0.6.0)
+    - libwebp/webp (= 0.6.0)
+  - libwebp/core (0.6.0):
+    - libwebp/webp
+  - libwebp/dec (0.6.0):
+    - libwebp/core
+  - libwebp/demux (0.6.0):
+    - libwebp/core
+  - libwebp/dsp (0.6.0):
+    - libwebp/core
+  - libwebp/enc (0.6.0):
+    - libwebp/core
+  - libwebp/mux (0.6.0):
+    - libwebp/core
+  - libwebp/utils (0.6.0):
+    - libwebp/core
+  - libwebp/webp (0.6.0)
+  - SDWebImage/Core (4.0.0)
+  - SDWebImage/WebP (4.0.0):
+    - libwebp
+    - SDWebImage/Core
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - JTProgressHUD
+  - SDWebImage/WebP
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  JTProgressHUD: 7eb019487a92731c8716c15f19e94690cf35f644
+  libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: f65e60a901cc214b1ad2a08756d6a319a3a28bed
+PODFILE CHECKSUM: 0c51ca7fe3a67f814bf626c405d71c3f624329be
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.1

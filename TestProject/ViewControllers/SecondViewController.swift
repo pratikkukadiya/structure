@@ -8,18 +8,38 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.doSetUpScreen()
+        self.doSetUpScreenNavigationBar()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    //MARK: - Functions
+    //MARK: -
+    
+    func doSetUpScreenNavigationBar() {
+        
+        self.title = AppTitle.Second
+        self.setDefaultLeftSideButotnWithImage()
+        self.setRightBarButtonTitle(Name: "Next", selector: #selector(self.btnNextClick(_:)))
+        
     }
+    
+    func doSetUpScreen()  {
+        
+        
+    }
+    
+    
+    //MARK: - Buttons Actions
+    //MARK: -
+    
     
     @IBAction func btnNextClick(_ sender: Any) {
         
@@ -31,14 +51,13 @@ class SecondViewController: UIViewController {
         
         self.popTo()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
+    
+   
 
 }

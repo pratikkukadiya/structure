@@ -20,33 +20,51 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //self.setAppearanceOfNavigationBar()
-        
-        self.title = AppTitle.Home
-  
-     
+        self.doSetUpScreenNavigationBar()
         self.doSetUpScreen()
+    
     }
     
     
     //MARK: - Functions
     //MARK: -
     
+    func doSetUpScreenNavigationBar() {
+        
+        self.title = AppTitle.Home
+        self.setDefaultLeftSideButotnWithImage()
+        self.setRightBarButtonTitle(Name: "Next", selector: #selector(self.btnNextClick(_:)))
+        
+    }
+    
     func doSetUpScreen()  {
         
         tableHome.blocKCallForDidSelect = { (selectedIndex) in
-            
             print(selectedIndex)
+        }
+        
+        
+        let json: [String: Any] = ["title": "ABC",
+                                   "dict": ["1":"First", "2":"Second"]]
+        
+        
+        UtilityManager.apiCaling(urlStr: "http://httpbin.org/post", jsonData: json) { (response, isSuccess) in
+            
+            let dictObj = response as! NSMutableDictionary
+            dictObj.object(forKey: "files")
             
         }
         
         
     }
     
+    
 
     //MARK: - Buttons Actions
     //MARK: -
     @IBAction func btnNextClick(_ sender: Any) {
+        
+     //   self.navigationController?.pushViewController((self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController"))!, animated: true)
         
         self.pushTo("SecondViewController")
         

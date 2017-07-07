@@ -13,8 +13,9 @@ extension UINavigationController {
     // Push To Any ViewController
     override func pushTo(_ viewController:String) {
    
-        self.navigationController?.pushViewController((self.storyboard?.instantiateViewController(withIdentifier: viewController))!, animated: true)
-    
+        self.pushViewController((self.storyboard?.instantiateViewController(withIdentifier: viewController))!, animated: true)
+        
+        
     }
     
     

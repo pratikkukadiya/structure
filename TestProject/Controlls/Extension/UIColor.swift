@@ -64,6 +64,8 @@ extension UIColor {
     struct AppColor {
         static var color_NavigationBar      = UIColor.RGB(206, 32, 32, 1)
         static var color_AppRedColor        = UIColor.RGB(206, 32, 32, 1)
+        static var color_AppGray            = UIColor.gray
+        
       }
     
     
